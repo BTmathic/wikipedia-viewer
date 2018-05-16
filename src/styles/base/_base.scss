@@ -1,0 +1,138 @@
+html {
+  font-size: 62.5%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  background: #444;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+  padding-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+#app {
+  margin: 10vh auto 0 auto;
+  width: 80vw;
+}
+
+#random-article, #search-secondary {
+  text-align: center;
+}
+
+#search-icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  width: 300px;
+}
+
+#search-icon-left, #search-icon-right {
+  border: 3px solid white;
+  height: 2*$search-width;
+  width: $search-width;
+}
+
+#search-icon-left {
+  border-bottom-left-radius: 2*$search-width;
+  border-right: 0;
+  border-top-left-radius: 2*$search-width;
+}
+
+#search-icon-right {
+  border-bottom-right-radius: 2*$search-width;
+  border-left: 0;
+  border-top-right-radius: 2*$search-width;
+}
+
+#search-input {
+  display: none;
+  margin-top: 3px;
+  padding-left: 3px;
+  padding-top: 2px;
+  width: 225px;
+}
+
+#search-icon-middle {
+  border-bottom: 3px solid white;
+  border-top: 3px solid white;
+  width: 0;
+}
+
+#close-search-input {
+  display: none;
+  font-size: 120%;
+  margin-left: 12px;
+}
+
+@keyframes slide-input-open {
+  from {width: 0}
+  to {width: 260px}
+}
+
+@keyframes slide-input-close {
+  from {width: 260px}
+  to {width: 0}
+}
+
+.search-icon-open {
+  animation-duration: 0.5s;
+  animation-name: slide-input-open;
+}
+
+.search-icon-close {
+  animation-duration: 0.5s;
+  animation-name: slide-input-close;
+}
+
+#search-results {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.search-result {
+  background: rgba(255,255,255,0.85);
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.search-result:hover {
+  background: rgba(225,225,225,0.85);
+}
+
+.search-result-title {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.search-result-snippet {
+  padding: 2px 10px;
+}
+
+@media (min-width: 760px) {
+  #search-results {
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1000px) {
+  #search-results {
+    max-width: 60%;
+  }
+}
