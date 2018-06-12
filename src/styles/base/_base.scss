@@ -3,13 +3,11 @@ html {
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
 body {
-  background: #444;
-  color: white;
+  background: #F6F6F6;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $m-size;
   padding-bottom: 20px;
@@ -28,74 +26,46 @@ button:disabled {
   width: 80vw;
 }
 
+h1 {
+  text-align: center;
+}
+
 #random-article, #search-secondary {
   text-align: center;
 }
 
-#search-icon {
+#search {
   cursor: pointer;
-  display: flex;
-  justify-content: center;
   margin: 5px auto;
   width: 300px;
 }
 
-#search-icon-left, #search-icon-right {
-  border: 3px solid white;
-  height: 2*$search-width;
-  width: $search-width;
-}
-
-#search-icon-left {
-  border-bottom-left-radius: 2*$search-width;
-  border-right: 0;
-  border-top-left-radius: 2*$search-width;
-}
-
-#search-icon-right {
-  border-bottom-right-radius: 2*$search-width;
-  border-left: 0;
-  border-top-right-radius: 2*$search-width;
-}
-
 #search-input {
-  display: none;
-  margin-top: 3px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 125%;
+  margin: 3px auto 10px auto;
   padding-left: 3px;
-  padding-top: 2px;
-  width: 225px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  width: 290px;
 }
 
-#search-icon-middle {
-  border-bottom: 3px solid white;
-  border-top: 3px solid white;
-  width: 0;
+#search-button, #random-button {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 0;
+  width: 49%;
 }
 
-#close-search-input {
-  display: none;
-  font-size: 120%;
-  margin-left: 12px;
+@keyframes load-search-results {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
-@keyframes slide-input-open {
-  from {width: 0}
-  to {width: 260px}
-}
-
-@keyframes slide-input-close {
-  from {width: 260px}
-  to {width: 0}
-}
-
-.search-icon-open {
-  animation-duration: 0.5s;
-  animation-name: slide-input-open;
-}
-
-.search-icon-close {
-  animation-duration: 0.5s;
-  animation-name: slide-input-close;
+.loaded-search-results {
+  animation-duration: 2s;
+  animation-name: load-search-results;
 }
 
 #search-results {
@@ -105,7 +75,9 @@ button:disabled {
 
 .search-result {
   background: rgba(255,255,255,0.85);
+  border: 1px solid black;
   border-radius: 5px;
+  box-shadow: 3px 2px;
   color: black;
   cursor: pointer;
   margin: 5px 0;
