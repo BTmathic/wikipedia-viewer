@@ -9,6 +9,6 @@ Search through articles on Wikipedia or get taken to a random article. Built usi
 
 ### Built Tools
 
-* Webpack
+* Parcel
 * Yarn
 * Babel
